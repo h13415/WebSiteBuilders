@@ -1,5 +1,5 @@
 # WebSiteBuilders
-
+<span style="color: red; ">※必ずindex.htmlをダウンロードしてください．</span>
 ## ファイル構成
 |フォルダ名 |説明                         |
 |:--        |:--                          |
