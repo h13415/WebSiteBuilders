@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/pages.css">
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.1.0/jquery.sidebar.min.js"></script>
+    <script type=”text/javascript” src=”sidebar.js”></script>
+    <script>
+        $(document).ready(function () {
+            // 向き
+            var sides = ["left", "top", "right", "bottom"];
+
+            // サイドバーの初期化
+            for (var i = 0; i < sides.length; ++i) {
+                var cSide = sides[i];
+                $(".sidebar." + cSide).sidebar({side: cSide});
+            }
+
+            // ボタンのクリックにより...
+            $(".btn[data-action]").on("click", function () {
+                var $this = $(this);
+                var action = $this.attr("data-action");
+                var side = $this.attr("data-side");
+                $(".sidebar." + side).trigger("sidebar:" + action);
+                return false;
+            });
+        });
+    </script>
+    <title>Information</title>
+  </head>
+  <body>
+    <div id="box">
+      <div id="subContent">
+        <p class="menu"><a href="#" class="btn" data-action="toggle" data-side="top">=</a></p>
+        <ul id="list" class="sidebar top">
+          <p class="menu" id="menu"><a href="#" class="btn" data-action="toggle" data-side="top">&times;</a></p>
+          <a class="listTag" href="top.html"><li class="sideBar" id="listTop"><span class="listContaints">Top</span></li></a>
+          <a class="listTag" href="information.html"><li class="sideBar"><span class="listContaints">Information</span></li></a>
+          <a class="listTag" href="access.html"><li class="sideBar"><span class="listContaints">Access</span></li></a>
+          <a class="listTag" href="group.html"><li class="sideBar"><span class="listContaints">Groups</span></li></a>
+          <a class="listTag" href="event.html"><li class="sideBar"><span class="listContaints">Events</span></li></a>
+        </ul>
+      </div>
+      <div id="mainContent">
+      <div id="mainInner">
+         <h1 id="top">第23回翔鷗祭</h1>
+         <h2>STEAM！〜カナソウ街にようこそ〜</h2>
+           <img id="poster" alt="poster" src="images/top/background.png">
+           <p>このサイトは神奈川総合高校文化祭「翔鷗祭」の情報を発信するため、生徒が主体となって作っています。少しでも皆さまの役にてるように、より良サイトを提供します。こころよりご来場お待ちしています。</p>
+         <h3>開催日時</h3>
+           <p>9/23（土） 10:00～16:00</p>
+           <p>9/24（日） 10:00～15:30</p>
+         <h3>お問い合わせ</h3>
+           <p>神奈川県立神奈川総合高等学校</p>
+           <p>TEL:045-491-2000</p>
+           <p><a href="http://www.kanagawasohgoh-h.pen-kanagawa.ed.jp/">学校のウェブサイト</a></p>
+       </div>
+       <footer><span id="footer">© 2017, Kanagawa Sohgoh High School WATS all rights reserved.</span></footer>
+      </div>
+    </div>
+  </body>
+</html>

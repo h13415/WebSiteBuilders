@@ -1,0 +1,120 @@
+@media screen and (min-width: 0px){
+    body{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (min-width: 768px){
+    body{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (min-width: 0px){
+    #box{
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 12, 6, 0.96);
+    }
+}
+@media screen and (min-width: 768px){
+    #box{
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 12, 6, 0.96);
+    }
+}
+@media screen and (min-width: 0px){
+    #mainContent{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+}
+@media screen and (min-width: 768px){
+    #mainContent{
+        margin: 0 auto;
+        height: 100%;
+        width: 70.7vh;
+        position: relative;
+    }
+}
+@media screen and (min-width: 0px){
+    #background{
+        margin: 8vh 0;
+        width: 100%;
+        height: 141vw;
+        position: absolute;
+    }
+}
+@media screen and (min-width: 768px){
+    #background{
+        margin: 0;
+        width: auto;
+        height: 100%;
+        position: absolute;
+    }
+}
+@media screen and (min-width: 0px){
+    #imgGuide{
+        width: 65%;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+    #imgAccess{
+        width: 65%;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+    #ingGroup{
+        width: 65%;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+    #imgEvent{
+        width: 65%;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+}
+@media screen and (min-width: 768px){
+    #imgGuide{
+        width: 65%;
+    }
+    #imgAccess{
+        width: 65%;
+    }
+    #ingGroup{
+        width: 65%;
+    }
+    #imgEvent{
+        width: 65%;
+    }
+}
+.linkHover:hover{
+    width: 70%;
+
+}
+@media screen and (min-width: 0px){
+    .linkBox{
+        display: inline-block;
+        width: 49%;
+        height: 20%;
+        position: relative;
+        top: 40%;
+    }
+}
+@media screen and (min-width: 768px){
+    .linkBox{
+        height: 30%;
+    }
+}
+footer{
+    width: 100%;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/pages.css">
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.1.0/jquery.sidebar.min.js"></script>
+    <script type=”text/javascript” src=”sidebar.js”></script>
+    <script>
+        $(document).ready(function () {
+            // 向き
+            var sides = ["left", "top", "right", "bottom"];
+
+            // サイドバーの初期化
+            for (var i = 0; i < sides.length; ++i) {
+                var cSide = sides[i];
+                $(".sidebar." + cSide).sidebar({side: cSide});
+            }
+
+            // ボタンのクリックにより...
+            $(".btn[data-action]").on("click", function () {
+                var $this = $(this);
+                var action = $this.attr("data-action");
+                var side = $this.attr("data-side");
+                $(".sidebar." + side).trigger("sidebar:" + action);
+                return false;
+            });
+        });
+    </script>
+    <title>Access</title>
+  </head>
+  <body>
+    <div id="box">
+      <div id="subContent">
+        <p class="menu"><a href="#" class="btn" data-action="toggle" data-side="top">=</a></p>
+        <ul id="list" class="sidebar top">
+          <p class="menu" id="menu"><a href="#" class="btn" data-action="toggle" data-side="top">&times;</a></p>
+          <a class="listTag" href="top.html"><li class="sideBar" id="listTop"><span class="listContaints">Top</span></li></a>
+          <a class="listTag" href="information.html"><li class="sideBar"><span class="listContaints">Information</span></li></a>
+          <a class="listTag" href="access.html"><li class="sideBar"><span class="listContaints">Access</span></li></a>
+          <a class="listTag" href="group.html"><li class="sideBar"><span class="listContaints">Groups</span></li></a>
+          <a class="listTag" href="event.html"><li class="sideBar"><span class="listContaints">Events</span></li></a>
+        </ul>
+      </div>
+      <div id="mainContent">
+      <div id="mainInner">
+        <h1 id="top">アクセス</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.9318002685113!2d139.62705871556324!3d35.48123118024141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c1f700586c3%3A0xe492baf16838284b!2z44CSMjIxLTA4MTIg56We5aWI5bed55yM5qiq5rWc5biC56We5aWI5bed5Yy65bmz5bed55S677yR77yZ!5e0!3m2!1sja!2sjp!4v1503845845667" width="700" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <h3>最寄駅</h3>
+          <p>東急東横線 「東白楽駅」下車 徒歩3分</p>
+          <p>ＪＲ京浜東北線・横浜線 「東神奈川駅」下車 徒歩9分</p>
+          <p>京浜急行線 「仲木戸駅」下車 徒歩10分</p>
+        <h3>所在地</h3>
+          <p>神奈川県立神奈川総合高等学校</p>
+          <p>神奈川県横浜市神奈川区平川町19-2</p>
+          <p>TEL:045-491-2000</p>
+      </div>
+      <footer><span id="footer">© 2017, Kanagawa Sohgoh High School WATS all rights reserved.</span></footer>
+      </div>
+    </div>
+  </body>
+</html>

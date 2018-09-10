@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/pages.css">
+    <link rel="stylesheet" type="text/css" href="CSS/panel.css">
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.1.0/jquery.sidebar.min.js"></script>
+    <script type=”text/javascript” src=”sidebar.js”></script>
+    <script>
+        $(document).ready(function () {
+            // 向き
+            var sides = ["left", "top", "right", "bottom"];
+
+            // サイドバーの初期化
+            for (var i = 0; i < sides.length; ++i) {
+                var cSide = sides[i];
+                $(".sidebar." + cSide).sidebar({side: cSide});
+            }
+
+            // ボタンのクリックにより...
+            $(".btn[data-action]").on("click", function () {
+                var $this = $(this);
+                var action = $this.attr("data-action");
+                var side = $this.attr("data-side");
+                $(".sidebar." + side).trigger("sidebar:" + action);
+                return false;
+            });
+        });
+    </script>
+    <title>Groups</title>
+  </head>
+  <body>
+  <div id="box">
+    <div id="subContent">
+      <p class="menu"><a href="#" class="btn" data-action="toggle" data-side="top">=</a></p>
+      <ul id="list" class="sidebar top">
+        <p class="menu" id="menu"><a href="#" class="btn" data-action="toggle" data-side="top">&times;</a></p>
+      	<a class="listTag" href="top.html"><li class="sideBar" id="listTop"><span class="listContaints">Top</span></li></a>
+        <a class="listTag" href="information.html"><li class="sideBar"><span class="listContaints">Information</span></li></a>
+    		<a class="listTag" href="access.html"><li class="sideBar"><span class="listContaints">Access</span></li></a>
+    		<a class="listTag" href="group.html"><li class="sideBar"><span class="listContaints">Groups</span></li></a>
+    		<a class="listTag" href="event.html"><li class="sideBar"><span class="listContaints">Events</span></li></a>
+      </ul>
+    </div>
+    <div id="mainContent">
+    <div id="mainInner">
+	  <h1 id="top">参加団体</h1>
+		<h2>飲食</h2>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_01.png">
+			  <div class="explanation">
+			   <p class="title">Cross Dresstar Cafe</p>
+			   <p>活動場所:703</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_02.png">
+			  <div class="explanation">
+			   <p class="title">FAIR TRADE CAFE</p>
+			   <p>活動場所:702</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_03.png">
+			  <div class="explanation">
+			   <p class="title">HASANDOCCER</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_04.png">
+			  <div class="explanation">
+			   <p class="title">ウチダおばさんのＳＩＸパック</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_05.png">
+			  <div class="explanation">
+			   <p class="title">おのれのぱっふぇ</p>
+			   <p>活動場所:701</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_06.png">
+			  <div class="explanation">
+			   <p class="title">きくち先生のおんまゆパンケーキ</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_07.png">
+			  <div class="explanation">
+			   <p class="title">すいまぁせんべぇ</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_08.png">
+			  <div class="explanation">
+			   <p class="title">タコ先輩のたこ焼き風</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_09.png">
+			  <div class="explanation">
+			   <p class="title">パリピうどん</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_10.png">
+			  <div class="explanation">
+			   <p class="title">ハワイアンズよりハワイ。</p>
+			   <p>活動場所:704</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_11.png">
+			  <div class="explanation">
+			   <p class="title">ピザとポンサク</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_12.png">
+			  <div class="explanation">
+			   <p class="title">よってきんしゃい！23A</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_13.png">
+			  <div class="explanation">
+			   <p class="title">海人</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_14.png">
+			  <div class="explanation">
+			   <p class="title">喜一Cheese Burger</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_15.png">
+			  <div class="explanation">
+			   <p class="title">好日庵</p>
+			   <p>活動場所:茶室</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_16.png">
+			  <div class="explanation">
+			   <p class="title">燃えよドラゴン、食えよ粉モン</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_17.png">
+			  <div class="explanation">
+			   <p class="title">雄幸軍団「炎のトルティーヤ」</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_18.png">
+			  <div class="explanation">
+			   <p class="title">裏かたピおか</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_19.png">
+			  <div class="explanation">
+			   <p class="title">魂～喉を潤せ！！～</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/food/food_20.png">
+			  <div class="explanation">
+			   <p class="title">チャプチャプトッポギ</p>
+			   <p>活動場所:屋台村</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+		<h2>展示</h2>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_01.png">
+			  <div class="explanation">
+			   <p class="title">ＣＧ総合同好会</p>
+			   <p>活動場所:508</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_02.png">
+			  <div class="explanation">
+			   <p class="title">console.log("Weja");</p>
+			   <p>活動場所:706</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_03.png">
+			  <div class="explanation">
+			   <p class="title">Mt.Kanasoh</p>
+			   <p>活動場所:506</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_04.png">
+			  <div class="explanation">
+			   <p class="title">PAINTING NOW</p>
+			   <p>活動場所:5Fフリースペース</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_05.png">
+			  <div class="explanation">
+			   <p class="title">Solidクラフト部</p>
+			   <p>活動場所:506</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_06.jpg">
+			  <div class="explanation">
+			   <p class="title">Steamed Buns</p>
+			   <p>活動場所:7Fエレベーターホール</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_07.png">
+			  <div class="explanation">
+			   <p class="title">WANTED</p>
+			   <p>活動場所:507</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_08.png">
+			  <div class="explanation">
+			   <p class="title">WATS</p>
+			   <p>活動場所:Web上</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_09.png">
+			  <div class="explanation">
+			   <p class="title">アイリス</p>
+			   <p>活動場所:508</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_10.png">
+			  <div class="explanation">
+			   <p class="title">いらぶんぶ</p>
+			   <p>活動場所:7Fくぼみ</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_11.png">
+			  <div class="explanation">
+			   <p class="title">えむでぃーの部室。</p>
+			   <p>活動場所:505</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_12.png">
+			  <div class="explanation">
+			   <p class="title">エレベーターパー祖ン</p>
+			   <p>活動場所:エレベーター</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_13.png">
+			  <div class="explanation">
+			   <p class="title">お休み処　あのすず</p>
+			   <p>活動場所:507</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_14.jpg">
+			  <div class="explanation">
+			   <p class="title">かなそう研修旅行の部屋</p>
+			   <p>活動場所:社会科学学習室</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_15.png">
+			  <div class="explanation">
+			   <p class="title">からくり街のビブ技師団</p>
+			   <p>活動場所:平面造形学習室、4Fエレベーターホール</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_16.png">
+			  <div class="explanation">
+			   <p class="title">そーだ。ここで休もう！</p>
+			   <p>活動場所:家庭総合学習室</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_17.png">
+			  <div class="explanation">
+			   <p class="title">それは盲展</p>
+			   <p>活動場所:401</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_18.png">
+			  <div class="explanation">
+			   <p class="title">テーマ研究の部屋</p>
+			   <p>活動場所:社会科学学習室</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_19.png">
+			  <div class="explanation">
+			   <p class="title">とっとと退け21～9人の悪あがき～</p>
+			   <p>活動場所:1F玄関ロビー</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_20.png">
+			  <div class="explanation">
+			   <p class="title">パートナーズ広報部</p>
+			   <p>活動場所:3F渡り廊下</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_21.png">
+			  <div class="explanation">
+			   <p class="title">パートナーズ国際交流部</p>
+			   <p>活動場所:7Fフリースペース</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_22.png">
+			  <div class="explanation">
+			   <p class="title">バザーファミリー</p>
+			   <p>活動場所:3Fエレベーターホール</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_23.png">
+			  <div class="explanation">
+			   <p class="title">びーどろ倶楽部</p>
+			   <p>活動場所:裏スペース</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_24.png">
+			  <div class="explanation">
+			   <p class="title">パートナーズ ベンチな人達</p>
+			   <p>活動場所:3F渡り廊下</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_25.png">
+			  <div class="explanation">
+			   <p class="title">映画の「映」</p>
+			   <p>活動場所:707</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_26.png">
+			  <div class="explanation">
+			   <p class="title">煙突街バラエティパック翔鴎祭vol.15</p>
+			   <p>活動場所:1F玄関ロビー</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_27.png">
+			  <div class="explanation">
+			   <p class="title">花いっぱいファミリー</p>
+			   <p>活動場所:301</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_28.png">
+			  <div class="explanation">
+			   <p class="title">銀河鉄道の夜～星の世界へ～</p>
+			   <p>活動場所:物理実験室</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_29.png">
+			  <div class="explanation">
+			   <p class="title">熊猫的房間</p>
+			   <p>活動場所:502</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_30.png">
+			  <div class="explanation">
+			   <p class="title">合気道部</p>
+			   <p>活動場所:801</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_31.png">
+			  <div class="explanation">
+			   <p class="title">時計館からの脱出</p>
+			   <p>活動場所:501</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_32.png">
+			  <div class="explanation">
+			   <p class="title">自然科学同好会</p>
+			   <p>活動場所:化学実験室</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_33.png">
+			  <div class="explanation">
+			   <p class="title">写真部</p>
+			   <p>活動場所:504</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_34.png">
+			  <div class="explanation">
+			   <p class="title">狩人</p>
+			   <p>活動場所:弓道場</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_35.png">
+			  <div class="explanation">
+			   <p class="title">書轟</p>
+			   <p>活動場所:書道学習室</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_36.png">
+			  <div class="explanation">
+			   <p class="title">神奈川総合クリニック</p>
+			   <p>活動場所:9Fへこみ、902</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_37.png">
+			  <div class="explanation">
+			   <p class="title">神奈川総合高校同窓会</p>
+			   <p>活動場所:人文科学学習室</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_38.png">
+			  <div class="explanation">
+			   <p class="title">星隣堂</p>
+			   <p>活動場所:3F図書館前くぼみ</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_39.png">
+			  <div class="explanation">
+			   <p class="title">生きてるっ☆★☆展</p>
+			   <p>活動場所:503</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/exhibition/exhibition_40.png">
+			  <div class="explanation">
+			   <p class="title">徹の部屋</p>
+			   <p>活動場所:705</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+		<h2>舞台</h2>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_01.png">
+			  <div class="explanation">
+			   <p class="title">3min</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_02.png">
+			  <div class="explanation">
+			   <p class="title">B with you</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_03.png">
+			  <div class="explanation">
+			   <p class="title">bud</p>
+			   <p>活動場所:AVスタジオ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_04.png">
+			  <div class="explanation">
+			   <p class="title">Chiffons</p>
+			   <p>活動場所:多目的ホール、野外ステージ</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_05.png">
+			  <div class="explanation">
+			   <p class="title">Chorus Lovers</p>
+			   <p>活動場所:器楽合奏室、5Fフリースペース</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_06.png">
+			  <div class="explanation">
+			   <p class="title">Drops</p>
+			   <p>活動場所:5Fフリースペース</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_07.png">
+			  <div class="explanation">
+			   <p class="title">GACHACK</p>
+			   <p>活動場所:多目的ホール</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_08.jpg">
+			  <div class="explanation">
+			   <p class="title">HTS平川青年団</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_09.png">
+			  <div class="explanation">
+			   <p class="title">JAZZ楽団</p>
+			   <p>活動場所:情熱発電所前</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_10.png">
+			  <div class="explanation">
+			   <p class="title">Kanaqours（かなくあ）</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_11.png">
+			  <div class="explanation">
+			   <p class="title">LILY PERIDOT</p>
+			   <p>活動場所:器楽合奏室</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_12.png">
+			  <div class="explanation">
+			   <p class="title">megaffons</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_13.png">
+			  <div class="explanation">
+			   <p class="title">おでん娘。’１７</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_14.png">
+			  <div class="explanation">
+			   <p class="title">お客様センターの片山浩樹</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_15.png">
+			  <div class="explanation">
+			   <p class="title">デザイン部</p>
+			   <p>活動場所:多目的ホール、AVスタジオ</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_16.png">
+			  <div class="explanation">
+			   <p class="title">ぷちでれらがーるず！</p>
+			   <p>活動場所:AVスタジオ</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_17.png">
+			  <div class="explanation">
+			   <p class="title">ミュージカル＆演劇部</p>
+			   <p>活動場所:多目的ホール</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_18.png">
+			  <div class="explanation">
+			   <p class="title">らっけん（落語研究会）</p>
+			   <p>活動場所:5Fフリースペース</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_19.png">
+			  <div class="explanation">
+			   <p class="title">王子カル☆ミュージのテニス様っ♪</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_20.png">
+			  <div class="explanation">
+			   <p class="title">歌いっぱいファミリー</p>
+			   <p>活動場所:器楽合奏室</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_21.png">
+			  <div class="explanation">
+			   <p class="title">軽音楽部</p>
+			   <p>活動場所:AVスタジオ、野外ステージ、多目的ホール</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_22.png">
+			  <div class="explanation">
+			   <p class="title">鍵盤隊</p>
+			   <p>活動場所:器楽合奏室</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_23.png">
+			  <div class="explanation">
+			   <p class="title">弦楽合奏部</p>
+			   <p>活動場所:5Fフリースペース、器楽学習室</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_24.png">
+			  <div class="explanation">
+			   <p class="title">高校白書２０００</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_25.png">
+			  <div class="explanation">
+			   <p class="title">神奈総の打ち師達</p>
+			   <p>活動場所:AVスタジオ</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_26.png">
+			  <div class="explanation">
+			   <p class="title">神奈総笑おうの会</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_27.png">
+			  <div class="explanation">
+			   <p class="title">吹奏楽部</p>
+			   <p>活動場所:器楽合奏室、多目的ホール</p>
+			   <p>活動日:1日目 2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_28.png">
+			  <div class="explanation">
+			   <p class="title">打樂～DAGAKU～</p>
+			   <p>活動場所:器楽合奏室</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_29.png">
+			  <div class="explanation">
+			   <p class="title">男華Beatz</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_30.png">
+			  <div class="explanation">
+			   <p class="title">木曜夕方六時半！</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:2日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_31.png">
+			  <div class="explanation">
+			   <p class="title">雄幸カンパニー=Cheonyeo</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_32.png">
+			  <div class="explanation">
+			   <p class="title">踊り子たち</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+			<div class="panel">
+			  <img class="icon" src="images/stage/stage_33.png">
+			  <div class="explanation">
+			   <p class="title">踊ろうよ！？</p>
+			   <p>活動場所:野外ステージ</p>
+			   <p>活動日:1日目</p>
+			  </div>
+			</div>
+		</div>
+		<footer><span id="footer">© 2017, Kanagawa Sohgoh High School WATS all rights reserved.</span></footer>
+    </div>
+  </div>
+</html>

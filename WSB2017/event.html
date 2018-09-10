@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/pages.css">
+    <link rel="stylesheet" type="text/css" href="CSS/panel.css">
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.1.0/jquery.sidebar.min.js"></script>
+    <script type=”text/javascript” src=”sidebar.js”></script>
+    <script>
+        $(document).ready(function () {
+            // 向き
+            var sides = ["left", "top", "right", "bottom"];
+
+            // サイドバーの初期化
+            for (var i = 0; i < sides.length; ++i) {
+                var cSide = sides[i];
+                $(".sidebar." + cSide).sidebar({side: cSide});
+            }
+
+            // ボタンのクリックにより...
+            $(".btn[data-action]").on("click", function () {
+                var $this = $(this);
+                var action = $this.attr("data-action");
+                var side = $this.attr("data-side");
+                $(".sidebar." + side).trigger("sidebar:" + action);
+                return false;
+            });
+        });
+    </script>
+    <title>Events</title>
+  </head>
+  <body>
+    <div id="box">
+      <div id="subContent">
+        <p class="menu"><a href="#" class="btn" data-action="toggle" data-side="top">=</a></p>
+        <ul id="list" class="sidebar top">
+          <p class="menu" id="menu"><a href="#" class="btn" data-action="toggle" data-side="top">&times;</a></p>
+          <a class="listTag" href="top.html"><li class="sideBar" id="listTop"><span class="listContaints">Top</span></li></a>
+          <a class="listTag" href="information.html"><li class="sideBar"><span class="listContaints">Information</span></li></a>
+          <a class="listTag" href="access.html"><li class="sideBar"><span class="listContaints">Access</span></li></a>
+          <a class="listTag" href="group.html"><li class="sideBar"><span class="listContaints">Groups</span></li></a>
+          <a class="listTag" href="event.html"><li class="sideBar"><span class="listContaints">Events</span></li></a>
+        </ul>
+      </div>
+      <div id="mainContent">
+      <div id="mainInner">
+        <h1 id="top">企画</h1>
+        <p><a href="timeTable.html">タイムテーブル</a></p>
+
+        <div class="panel">
+          <img class="icon" src="images/event/event_01.png">
+          <div class="explanation">
+           <p class="title">朝礼だよ！全員集合☆</p>
+           <p>活動場所：アーチ前</p>
+           <p>活動日:1日目 2日目 開場時</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_02.png">
+          <div class="explanation">
+           <p class="title">チクタク数えちゃうぞ！</p>
+           <p>活動場所：アーチ前</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_03.png">
+          <div class="explanation">
+           <p class="title">おやすみ処</p>
+           <p>活動場所：7Fフリースペース</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_04.png">
+          <div class="explanation">
+           <p class="title">スポタイ</p>
+           <p>活動場所：5Fフリースペース</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_05.png">
+          <div class="explanation">
+           <p class="title">定時だよ！全員解散☆</p>
+           <p>活動場所：アーチ前</p>
+           <p>活動日:1日目 2日目 閉場時</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_06.png">
+          <div class="explanation">
+           <p class="title">バルーンドロップ</p>
+           <p>活動場所：吹き抜け</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_07.jpg">
+          <div class="explanation">
+           <p class="title">BanVanプラバン</p>
+           <p>活動場所：7Fフリースペース</p>
+           <p>活動日:1日目 2日目 9：00-12：00</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_08.png">
+          <div class="explanation">
+           <p class="title">神奈総美術館</p>
+           <p>活動場所：9Fエレベーター裏スペース</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_09.png">
+          <div class="explanation">
+           <p class="title">届けます。熱い想い</p>
+           <p>活動場所：7Fフリースペース</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_10.png">
+          <div class="explanation">
+           <p class="title">撮影スポット</p>
+           <p>活動場所：アーチ付近</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_11.png">
+          <div class="explanation">
+           <p class="title">Tシャツフェス</p>
+           <p>活動場所：5Fエレベーター裏スペース</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_12.png">
+          <div class="explanation">
+           <p class="title">機械仕掛けのモザイクアート</p>
+           <p>活動場所：7Fフリースペース</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_13.png">
+          <div class="explanation">
+           <p class="title">ウォーターパンク</p>
+           <p>活動場所：情熱発電所前</p>
+           <p>活動日:1日目 2日目 11：00-13：00</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_14.png">
+          <div class="explanation">
+           <p class="title">祭企画のTwitter</p>
+           <p>活動場所：Web上</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_15.png">
+          <div class="explanation">
+           <p class="title">我々の叫び</p>
+           <p>活動場所：野外ステージ</p>
+           <p>活動日:1日目 2日目</p>
+          </div>
+        </div>
+        <div class="panel">
+          <img class="icon" src="images/event/event_16.jpg">
+          <div class="explanation">
+           <p class="title">ドキドキ☆ビンゴ大会</p>
+           <p>活動場所：野外ステージ</p>
+           <p>活動日:2日目</p>
+          </div>
+        </div>
+       </div>
+       <footer><span id="footer">© 2017, Kanagawa Sohgoh High School WATS all rights reserved.</span></footer>
+      </div>
+    </div>
+  </body>
+</html>
