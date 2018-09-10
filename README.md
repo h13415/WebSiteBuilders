@@ -28,6 +28,17 @@
 ### 内容
 * 参加団体の紹介
 
+### アイコンの形式
+```
+<div class="panel">
+   <img class="icon" src="images/food/food_01.png">
+   <div class="explanation">
+      <p class="title">Cross Dresstar Cafe</p>
+      <p>活動場所:703</p>
+      <p>活動日:1日目 2日目</p>
+   </div>
+</div>
+```
 団体の紹介文とアイコンは広報係から入手する．
 
 ## access.html
@@ -52,6 +63,7 @@ height="450"
 * 東急東横線 「東白楽駅」下車 徒歩3分
 * ＪＲ京浜東北線・横浜線 「東神奈川駅」下車 徒歩9分
 * 京浜急行線 「仲木戸駅」下車 徒歩10分
+
 
 
 
