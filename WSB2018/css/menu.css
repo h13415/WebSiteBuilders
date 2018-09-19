@@ -288,6 +288,7 @@ p{
 }
 #footer{
 	padding: 20px 0;
+	border-top: solid 3px #542013;
 	background: #812f23;
 	font-size: 12px;
 	line-height: 40px;
