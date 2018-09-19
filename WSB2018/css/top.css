@@ -1,0 +1,66 @@
+@media screen and (min-width: 0px) {
+    body{
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+    #yellow{
+        background-color: #d99e40;
+    }
+    iframe{
+        width: 100%;
+        height: 220px;
+    }
+    footer{
+        font-size: 12px;
+        line-height: 1.2em;
+
+    }
+}
+@media screen and (min-width: 480px) {
+    #yellow{
+        background-color: #372817;
+    }
+    iframe{
+        height: 450px;
+    }
+    footer{
+        font-size: 16px;
+        line-height: 1.5em;
+
+    }
+}
+@media screen and (min-width: 768px) {
+    #yellow{
+        background-color: #ad4620;
+    }
+    iframe{
+        width: 90%;
+    }
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color: #2c2827;
+    background-color: #d99e40;
+}
+#yellow{
+    margin: 0 15vw;
+}
+#title{
+    font-size: 58px;
+}
+.ggmap {
+position: relative;
+
+}
+ 
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}

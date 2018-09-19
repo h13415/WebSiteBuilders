@@ -1,0 +1,8 @@
+<tr>
+    <th class="line3 borderNone">10:20</th>
+    <td class="line3 color02">［10:20～］たこ焼き</td>
+</tr>
+<tr>
+    <th class="line2 borderNone">11:10</th>
+    <td class="line2 color02">［11:10～］綿あめ</td>
+</tr>
