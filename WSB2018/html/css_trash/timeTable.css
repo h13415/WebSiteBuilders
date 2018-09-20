@@ -1,8 +1,9 @@
 body{
     margin: 0;
+    background-color: #D8C8AE;
 }
 caption {
-    margin-bottom: 20px;
+    margin: 10px;
     font-size: 18px;
     font-weight: bold;
     text-align: left;
@@ -16,7 +17,7 @@ caption {
     zoom: 1;
 }
 .tableBox{
-    margin: 0 10px;
+    margin: 0;
 }
 table {
     width: 100%;
@@ -31,7 +32,7 @@ th,td {
 }
 th {
     width: 70px;
-    font-size:12px;
+    font-size: 14px;
     color: #fff;
     text-align: center;
     background-color: #2c2827;
@@ -48,18 +49,18 @@ td {
     border-bottom: 1px solid #2c2827;
 }
 .tableBox th.just {
-    padding-top: 7px;
+    padding-top: 10px;
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: bold;
     line-height: 1;
 }
 .tab_wrap{width:500px;margin: 80px auto 0 auto;}
 input[type="radio"]{display:none;}
 .tab_area{font-size:0; margin:0 10px;}
-.tab_area label{width:30px; margin:0 5px; display:inline-block; padding:12px 0; color:#999; background:#ddd; text-align:center; font-size:13px; cursor:pointer; transition:ease 0.2s opacity;}
+.tab_area label{width:30px;margin:0 5px;display:inline-block;padding:12px 0;color:#999;background:#ddd;text-align:center;font-size:13px;cursor:pointer;transition:ease 0.2s opacity;}
 .tab_area label:hover{opacity:0.5;}
-.panel_area{background:#fff;}
+.panel_area{background:#fff;height: 3110px;}
 .tab_panel{width:100%;height: auto;/* padding:80px 0; */display:none;}
 .tab_panel p{font-size:14px; letter-spacing:1px; text-align:center;}
  
@@ -85,7 +86,8 @@ input[type="radio"]{display:none;}
         width: 100%;
     }
     .tab_wrap{
-        width: 80%;
+        width: 300px;
+        height: 100%;
     }
     .col2of4 {
         width: 300px;

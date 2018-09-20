@@ -226,7 +226,7 @@ body{
 }
 p{
 	margin: 0 10vw;
-	line-height: 1.5em;
+	/* line-height: 1.5em; */
 }
 #bat{
 	text-align: left;
