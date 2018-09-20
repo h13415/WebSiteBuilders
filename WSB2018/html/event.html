@@ -1,162 +1,895 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/top.css">
+    <link rel="stylesheet" type="text/css" href="../css/access.css">
     <link rel="stylesheet" type="text/css" href="../css/timeTable.css">
+    <title>Event</title>
   </head>
-
   <body>
-    <div class="timeTable">
-      <div class="col2of4">
-        <div class="tableBox">
-          <table>
-            <caption>■1日目</caption>
-            <tbody>
-              <tr>
-                <th class="just borderNone">10:00</th>
-                <td class="line2"></td>
-              </tr>
-              <tr>
-                <th class="line8 borderNone">10:10</th>
-                <td class="line8 color02">［10:10～］ 吹奏楽部</td>
-              </tr>
-              <tr>
-                <th></th>
-                <td class="line2"></td>
-              </tr>
-              <tr>
-                <th class="just">11:00</th>
-                <td class="line12"></td>
-              </tr>
-              <tr>
-                <th class="just borderNone"　>12:00</th>
-                <td class="line2"></td>
-              </tr>
-              <tr>
-                  <th class="line10">12:10</th>
-                  <td class="line13 color02" rowspan="2">［12:10～］  軽音楽部</td>
-              </tr>
-              <tr>
-                  <th class="line3 just borderNone">13:00</th>
-              </tr>
-              <tr>
-                  <th class="line9"></th>
-                  <td></td>
-              </tr>
-                <th class="just borderNone"　>14:00</th>
-                <td class="line7"></td>
-              </tr>
-              <tr>
-                  <th class="line5">14:35</th>
-                  <td class="line14 color02" rowspan="2">［14:35～］ GACHACK</td>
-              </tr>
-              <tr>
-                  <th class="line9 just borderNone">15:00</th>
-              </tr>
-              <tr>
-                <th class="borderNone"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="just borderNone">16:00</th>
-                <td class="color01">CLOSE</td>
-              </tr>
-            </tbody>
-          </table>
-        <!-- /.tableBox --></div>
-      <!-- /.col2of4 --></div>
+  	<!--
+	Copyright (c) 2015 Virgil Pana
+	Released under the MIT license
+	http://opensource.org/licenses/mit-license.php
+	-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>	
+        <div class="screen">
+        	<div class="navbar"></div>
+        	<div class="list">
+        		<div class="timeTable">
+					<div class="tab_wrap">
+					  <input id="tab1" type="radio" name="tab_btn" checked>
+					  <input id="tab2" type="radio" name="tab_btn">
+					  <input id="tab3" type="radio" name="tab_btn">
+					  <input id="tab4" type="radio" name="tab_btn">
+					  <input id="tab5" type="radio" name="tab_btn">
+					  <input id="tab6" type="radio" name="tab_btn">
 
-      <div class="col2of4">
-        <div class="tableBox">
-          <table>
-            <caption>■2日目</caption>
-            <tbody>
-              <tr>
-                <th class="just borderNone" rowspan="2">10:00</th>
-                <td class="line2"></td>
-              </tr>
-              <tr></tr>
-              <tr>
-                <th class="line5 borderNone">10:10</th>
-                <td class="line5 color02">［10:10～］ デザイン部</td>
-              </tr>
-              <tr>
-                <th></th>
-                <td class="line5"></td>
-              </tr>
-              <tr>
-                <th class="just borderNone"　>11:00</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="borderNone"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="line12">11:55</th>
-                <td class="line12 color02">[11:55～]　ミュージカル＆演劇部</td>
-              </tr>
-              <tr>
-                <th class="just borderNone"　>12:00</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="borderNone"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="just borderNone"　>13:00</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="borderNone"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="just borderNone"　>14:00</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="borderNone"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="line14 borderNone">14:35</th>
-                <td class="line14 color02">[14:35～]　GACHACK</td>
-              </tr>
-              <tr>
-                <th></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="just borderNone"　>15:00</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="borderNone"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th class="borderNone">15:30</th>
-                <td class="color01">CLOSE</td>
-              </tr>
-            </tbody>
-          </table>
-        <!-- /.tableBox --></div>
-      <!-- /.col2of4 --></div>
-    <!-- /.timeTable --></div>
+					  <div class="tab_area">
+						<label class="tab1_label" for="tab1">多目的ホール</label>
+						<label class="tab2_label" for="tab2">野外ステージ</label>
+						<label class="tab3_label" for="tab3">情熱発電所</label>
+						<label class="tab4_label" for="tab4">器楽合奏室</label>
+						<label class="tab5_label" for="tab5">AVスタジオ</label>
+						<label class="tab6_label" for="tab6">5Fフリースペース</label>
+					  </div>
+					  <div class="panel_area">
+						<div id="panel1" class="tab_panel">
+								<div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■1日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just borderNone">10:00</th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											<th class="line8 borderNone">10:10</th>
+											<td class="line8 color02">［10:10～］ 吹奏楽部</td>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											<th class="just">11:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone"　>12:00</th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											  <th class="line10">12:10</th>
+											  <td class="line13 color02" rowspan="2">［12:10～］  軽音楽部</td>
+										  </tr>
+										  <tr>
+											  <th class="line3 just borderNone">13:00</th>
+										  </tr>
+										  <tr>
+											  <th class="line9"></th>
+											  <td></td>
+										  </tr>
+											<th class="just borderNone"　>14:00</th>
+											<td class="line7"></td>
+										  </tr>
+										  <tr>
+											  <th class="line5">14:35</th>
+											  <td class="line14 color02" rowspan="2">［14:35～］ GACHACK</td>
+										  </tr>
+										  <tr>
+											  <th class="line9 just borderNone">15:00</th>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td></td>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">16:00</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+
+								  <div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■2日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just borderNone" rowspan="2">10:00</th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr></tr>
+										  <tr>
+											<th class="line5 borderNone">10:10</th>
+											<td class="line5 color02">［10:10～］ デザイン部</td>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line5"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone"　>11:00</th>
+											<td class="line11"></td>
+										  </tr>
+										  <tr>
+											  <th class="line1">11:55</th>
+											  <td class="line12 color02" rowspan="2">［11:55～］  ミュージカル＆演劇部</td>
+										  </tr>
+										  <tr>
+											  <th class="line11 just borderNone">12:00</th>
+										  </tr>
+										  <tr>
+											<th class=""></th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											<th class="just">13:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone"　>14:00</th>
+											<td class="line3"></td>
+										  </tr>
+										  <tr>
+											  <th class="line9">14:15</th>
+											  <td class="line12 color02" rowspan="2">［14:15～］ Chiffons</td>
+										  </tr>
+										  <tr>
+											  <th class="line3 just borderNone">15:00</th>
+										  </tr>
+										  <tr>
+											<th class=""></th>
+											<td class="line4"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">15:30</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+						</div>
+						<div id="panel2" class="tab_panel">
+							<div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■1日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just borderNone">10:00</th>
+											<td class="line5"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">10:25</th>
+											<td class="line3 color02">［10:25～］ かなプリ</td>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											  <th class="line2">10:50</th>
+											  <td class="line5 color02" rowspan="2">［10:50～］ 男華Beatz</td>
+										  </tr>
+										  <tr>
+											  <th class="line3 just borderNone">11:00</th>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">11:25</th>
+											<td class="line3 color02">［11:25～］ 神奈坂46</td>
+										  </tr>
+										  <tr>
+											<th class=""></th>
+											<td class="line4"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">12:00</th>
+											<td class="line9 color02">［12:00～］王子カル☆ミュージのテニス様っ♪</td>
+										  </tr>
+										  <tr>
+											<th class=""></th>
+											<td class="line3"></td>
+										  </tr>
+										  <tr>
+											  <th class="just borderNone">13:00</th>
+											  <td class="line6 color02">［13:00～］ Chiffons</td>
+										  </tr>
+										  <tr>
+											  <th class="borderNone"></th>
+											  <td class="line2"></td>
+										  </tr>
+										  <tr>
+											  <th class="line4">13:40</th>
+											  <td class="line5 color02" rowspan="2">［13:40～］ おばけたちのプレゼント~ビンゴ大会~</td>
+										  </tr>
+										  <tr>
+											  <th class="line1 just borderNone">14:00</th>
+										  </tr>
+										  <tr>
+											  <th class="line2 borderNone"></th>
+											  <td></td>
+										  </tr>
+										  <tr>
+											  <th class="borderNone">14:15</th>
+											  <td class="line5 color02">［14:15～］VAMUDA</td>
+										  </tr>
+										  <tr>
+											  <th class="line2 borderNone"></th>
+											  <td></td>
+										  </tr>
+										  <tr>
+											  <th class="">14:50</th>
+											  <td class="line2 color02">［14:50～］ 白楽漫才協会</td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">15:00</th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											  <th class="borderNone">15:05</th>
+											  <td class="line8 color02">［15:05～］ miniffons</td>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line4"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">16:00</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+
+								  <div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■2日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just borderNone">10:00</th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">10:10</th>
+											<td class="line4 color02">［10:10～］ 神奈総らいだーず</td>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											  <th class="line4">10:40</th>
+											  <td class="line5 color02" rowspan="2">［10:40～］  木曜夕方6時半！</td>
+										  </tr>
+										  <tr>
+											  <th class="line1 just borderNone">11:00</th>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">11:10</th>
+											<td class="line3 color02">［11:10～］ FairyFloss</td>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">11:30</th>
+											<td class="line2 color02">［11:30～］ジェリービーンズ</td>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											  <th class="line3">11:45</th>
+											  <td class="line5 color02" rowspan="2">［11:45～］  雄幸カンパニー=Cheonyeo</td>
+										  </tr>
+										  <tr>
+											  <th class="line2 just borderNone">12:00</th>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">12:15</th>
+											<td class="line1 color02">［12:15～］オーガニックポテトになりたい。</td>
+										  </tr>
+										  <tr>
+											<th class=""></th>
+											<td class="line9"></td>
+										  </tr>
+										  <tr>
+											  <th class="just borderNone">13:00</th>
+											  <td class="line1 color02">［13:00～］ Bluetoooooooooth</td>
+										  </tr>
+										  <tr>
+											  <th class="borderNone"></th>
+											  <td class="line2"></td>
+										  </tr>
+										  <tr>
+											  <th class="borderNone">13:15</th>
+											  <td class="line4 color02">［13:15～］ Kanaqours</td>
+										  </tr>
+										  <tr>
+											  <th class="line2 borderNone"></th>
+											  <td></td>
+										  </tr>
+										  <tr>
+											  <th class="">13:45</th>
+											  <td class="line3 color02">［13:45～］ AirDrop</td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone"　>14:00</th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											  <th class="borderNone">14:10</th>
+											  <td class="line3 color02">［14:10～］ PiiS</td>
+										  </tr>
+										  <tr>
+											  <th class="line2 borderNone"></th>
+											  <td></td>
+										  </tr>
+										  <tr>
+											  <th class="borderNone">14:35</th>
+											  <td class="line3 color02">［14:35～］ 高校白書2000</td>
+										  </tr>
+										  <tr>
+											  <th class="line2"></th>
+											  <td></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone"　>15:00</th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											  <th class="borderNone">15:05</th>
+											  <td class="line3 color02">［15:05～］ 勝手丼</td>
+										  </tr>
+										  <tr>
+											<th class="borderNone line2"></th>
+											<td></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">15:30</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+						</div>
+						<div id="panel3" class="tab_panel">
+							<div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■1日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just">10:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">11:00</th>
+											<td class="line3"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">11:15</th>
+											<td class="line6 color02">［11:15～］  JAZZ楽団</td>
+										  </tr>
+										  <tr>
+											<th class=""></th>
+											<td class="line3"></td>
+										  </tr>
+										  <tr>
+											<th class="just">12:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just">13:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just">14:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just">15:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">16:00</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+
+								  <div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■2日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just">10:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just">11:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">12:00</th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">12:10</th>
+											<td class="line4 color02">［12:10～］しょどうぶ</td>
+										  </tr>
+										  <tr>
+											<th class=""></th>
+											<td class="line6"></td>
+										  </tr>
+										  <tr>
+											<th class="just">13:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just">14:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">15:00</th>
+											<td class="line6"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">15:30</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+						</div>
+						<div id="panel4" class="tab_panel">
+								<div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■1日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just line6 borderNone">10:00</th>
+											<td class="line6 color02">［10:00～］ 歌いっぱいファミリー</td>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line4"></td>
+										  </tr>
+										  <tr>
+											<th class="line1">10:55</th>
+											<td class="line11 color02" rowspan="2">［10:55～］ １０階民の総合コンサート(随時開催)</td>
+										  </tr>
+										  <tr>
+											<th class="line10 just borderNone"　>11:00</th>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											<th class="line3 just borderNone"　>12:00</th>
+											<td class="line3"></td>
+										  </tr>
+										  <tr>
+											<th class="lien6 borderNone">12:15</th>
+											<td class="line6 color02">[12:15～] 鍵盤隊</td>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line3"></td>
+										  </tr>
+										  <tr>
+											<th class="line2 just borderNone"　>13:00</th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											<th class="line10">13:10</th>
+											<td class="line34 color02" rowspan="3">[13:10～]　１０階民の総合コンサート(随時開催)</td>
+										  </tr>
+										  <tr>
+											<th class="line12 just">14:00</th>
+										  </tr>
+										  <tr>
+											<th class="line12 just　borderNone">15:00</th>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">16:00</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+
+								  <div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■2日目</caption>
+										<tbody>
+										  <tr>
+											<th class="borderNone">10:00</th>
+											<td class="line3"></td>
+										  </tr>
+										  <tr>
+											<th class="line9">10:15</th>
+											<td class="line12 color02" rowspan="2">［10:15～］ 打樂～DAGAKU～</td>
+										  </tr>
+										  <tr>
+											<th class="line3 just borderNone"　>11:00</th>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line9"></td>
+										  </tr>
+										  <tr>
+											<th class="line2 just borderNone"　>12:00</th>
+											<td class="line2"></td>
+										  </tr>
+										  <tr>
+											<th class="line10">12:10</th>
+											<td class="line10 color02">［12:10～］ 吹奏楽部</td>
+										  </tr>
+										  <tr>
+											<th class="line12 just">13:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="line1 just borderNone">14:00</th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											<th class="line11">14:05</th>
+											<td class="line12 color02" rowspan="2">[14:05～]　弦楽合奏部</td>
+										  </tr>
+										  <tr>
+											<th class="line1 just borderNone">15:00</th>
+										  </tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line5"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">15:30</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+									   </tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+						</div>
+						<div id="panel5" class="tab_panel">
+							<div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■1日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just borderNone">10:00</th>
+											<td class="line5"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">10:25</th>
+											<td class="line6 color02">［10:25～］デザイン部</td>
+										  </tr>
+										  <tr>
+											<th class=""></th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											<th class="just">11:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just">12:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just">13:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just">14:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just">15:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">16:00</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+
+								  <div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■2日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just">10:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											  <th class="line12">11:00</th>
+											  <td class="line12 color02" rowspan="4">［11:00～］軽音楽部の幽霊部員達</td>
+										  </tr>
+										  <tr>
+											  <th class="line12 just">12:00</th>
+										  </tr>
+										  <tr>
+											  <th class="line12 just">13:00</th>
+										  </tr>
+										  <tr>
+											  <th class="line4 just borderNone">14:00</th>
+										  </tr>
+										  <tr>
+											<th class=""></th>
+											<td class="line8"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">15:00</th>
+											<td class="line6"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">15:30</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+						</div>
+						<div id="panel6" class="tab_panel">
+								  <div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■1日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just">10:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">11:00</th>
+											<td class="line9"></td>
+										  </tr>
+										  <tr>
+											<th class="line3">11:45</th>
+											<td class="line8 color02" rowspan="2">[11:45～]　平民と貴族</td>
+										  </tr>
+										  <tr>
+											<th class="line5 just borderNone">12:00</th>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line7"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">13:00</th>
+											<td class="line6"></td>
+										  </tr>
+										  <tr>
+											<th class="line6">13:30</th>
+											<td class="line12 color02" rowspan="2">[13:30～]　弦楽合奏部</td>
+										  <tr>
+											<th class="line6 just borderNone">14:00</th>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line6"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">15:00</th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											<th class="line10 borderNone">15:05</th>
+											<td class="line10 color02">［15:05～］ Chorus Lovers</td>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">16:00</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+										</tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+
+								  <div class="col2of4">
+									<div class="tableBox">
+									  <table>
+										<caption>■2日目</caption>
+										<tbody>
+										  <tr>
+											<th class="just">10:00</th>
+											<td class="line9"></td>
+										  </tr>
+										  <tr></tr>
+										  <tr>
+											<th class="borderNone"></th>
+											<td class="line8"></td>
+										  </tr>
+										  <tr>
+											<th class="line3">10:45</th>
+											<td class="line10 color02" rowspan="2">［10:45～］ Chorus Lovers</td>
+										  </tr>
+										  <tr>
+											<th class="line7 just borderNone">11:00</th>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line5"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">12:00</th>
+											<td class="line5"></td>
+										  </tr>
+										  <tr>
+											<th class="line7">12:25</th>
+											<td class="line7 color02">[12:25～]　インパチェンス</td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">13:00</th>
+											<td class="line3"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">13:15</th>
+											<td class="line8 color02">[13:15～]　～雄幸produce～BOAK</td>
+										  </tr>
+										  <tr>
+											<th></th>
+											<td class="line1"></td>
+										  </tr>
+										  <tr>
+											<th class="just">14:00</th>
+											<td class="line12"></td>
+										  </tr>
+										  <tr>
+											<th class="just borderNone">15:00</th>
+											<td class="line6"></td>
+										  </tr>
+										  <tr>
+											<th class="borderNone">15:30</th>
+											<td class="color01">CLOSE</td>
+										  </tr>
+									   </tbody>
+									  </table>
+									<!-- /.tableBox --></div>
+								  <!-- /.col2of4 --></div>
+						</div>
+					  </div>
+					</div> 
+					<!-- /.timeTable --></div>
+				<div id="footer">
+					<p id="footerTop">神奈川総合高校　翔鷗祭実行委員会</p>
+					<p>サイト運営　Web Site Builders</p>
+					<a href="https://twitter.com/kns_kikaku_24"><img id="twitter" src="../images/top/twitter_icon.png" alt="twitter"></a>
+					<p><a href="http://www.kanagawasohgoh-h.pen-kanagawa.ed.jp">神奈川総合高校公式ホームページ</a></p>
+					<p>TEL:045-491-2000</p>
+					<p>FAX:045-491-3190</p>
+					<p>© 2018, Kanagawa Sohgoh High School Web Site Builders all rights reserved.</p>
+				</div>
+            	
+            </div>
+	        <div class="circle"></div>
+			<div class="menu">
+				<ul>
+					<li><a href="../top.html">Top Page</a></li>
+					<li><a href="./access.html">Event</a></li>
+					<li><a href="./group.html">Group</a></li>
+                    <li><a href="./event.html">Access</a></li>
+				</ul>
+			</div>			            
+			<div class="burger">
+				<div class="x"></div>
+				<div class="y"></div>
+                <div class="z"></div>
+			</div>    
+
+		</div>	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+		if( 'ontouchstart' in window ){ var click = 'touchstart'; }
+		else { var click = 'click'; }
+
+
+		$('div.burger').on(click, function(){
+
+				if( !$(this).hasClass('open') ){ openMenu(); } 
+				else { closeMenu(); }
+
+		});
+
+
+		$('div.menu ul li a').on(click, function(e){
+			e.preventDefault();
+			closeMenu();
+		});		
+
+
+		function openMenu(){
+
+			$('div.circle').addClass('expand');
+
+			$('div.burger').addClass('open');	
+			$('div.x, div.y, div.z').addClass('collapse');
+			$('.menu li').addClass('animate');
+
+			setTimeout(function(){ 
+				$('div.y').hide(); 
+				$('div.x').addClass('rotate30'); 
+				$('div.z').addClass('rotate150'); 
+			}, 70);
+			setTimeout(function(){
+				$('div.x').addClass('rotate45'); 
+				$('div.z').addClass('rotate135');  
+			}, 120);
+
+
+
+		}
+
+		function closeMenu(){
+
+			$('div.burger').removeClass('open');	
+			$('div.x').removeClass('rotate45').addClass('rotate30'); 
+			$('div.z').removeClass('rotate135').addClass('rotate150');				
+			$('div.circle').removeClass('expand');
+			$('.menu li').removeClass('animate');
+
+			setTimeout(function(){ 			
+				$('div.x').removeClass('rotate30'); 
+				$('div.z').removeClass('rotate150'); 			
+			}, 50);
+			setTimeout(function(){
+				$('div.y').show(); 
+				$('div.x, div.y, div.z').removeClass('collapse');
+			}, 70);													
+
+		}
+	</script>
+	<!-- end-->
   </body>
- </html>
- 
+</html>

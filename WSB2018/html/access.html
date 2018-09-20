@@ -1,26 +1,122 @@
 <!DOCTYPE html>
 <html lang="ja">
- <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../css/top.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Access</title>
- </head>
- <body>
- <div id="yellow">
-  <h1>アクセス</h1>
-  <h3>東急東横線</h3>
-  <p>『東白楽駅』下車　徒歩3分</p>
-  <h3>JR京浜東北線・横浜線</h3>
-  <p>『東神奈川駅』下車　徒歩9分</p>
-  <h3>京浜急行線</h3>
-  <p>『仲木戸駅』下車　徒歩10分</p> 
-  <div id="ggmap">
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.932782448659!2d139.62640581573652!3d35.48120688024137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c1f0cbcbd89%3A0x2bd0055a8cb0e85b!2z56We5aWI5bed55yM56uL56We5aWI5bed57eP5ZCI6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1536565163238" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
-  <p>神奈川県横浜市神奈川区平川町19-2  TEL:045-491-2000</p>
-  <p>神奈川県立神奈川総合高等学校</p>
-  <footer><span id="footer">© 2018, Kanagawa Sohgoh High School Web Site Builders all rights reserved.</span></footer>
- </div>
- </body>
-</html>  
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/top.css">
+    <link rel="stylesheet" type="text/css" href="../css/access.css">
+    <title>Access</title>
+  </head>
+  <body>
+  	<!--
+	Copyright (c) 2015 Virgil Pana
+	Released under the MIT license
+	http://opensource.org/licenses/mit-license.php
+	-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>	
+        <div class="screen">
+        	<div class="navbar"></div>
+        	<div class="list">
+        		<h1 id="title">アクセス</h1>
+				<h3>東急東横線</h3>
+				<p>『東白楽駅』下車　徒歩3分</p>
+				<h3>JR京浜東北線・横浜線</h3>
+				<p>『東神奈川駅』下車　徒歩9分</p>
+				<h3>京浜急行線</h3>
+				<p>『仲木戸駅』下車　徒歩10分</p> 
+				<div id="ggmap">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.932782448659!2d139.62640581573652!3d35.48120688024137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c1f0cbcbd89%3A0x2bd0055a8cb0e85b!2z56We5aWI5bed55yM56uL56We5aWI5bed57eP5ZCI6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1536565163238" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<p>神奈川県横浜市神奈川区平川町19-2  TEL:045-491-2000</p>
+				<p>神奈川県立神奈川総合高等学校</p>
+				<div id="footer">
+					<p id="footerTop">神奈川総合高校　翔鷗祭実行委員会</p>
+					<p>サイト運営　Web Site Builders</p>
+					<a href="https://twitter.com/kns_kikaku_24"><img id="twitter" src="../images/top/twitter_icon.png" alt="twitter"></a>
+					<p><a href="http://www.kanagawasohgoh-h.pen-kanagawa.ed.jp">神奈川総合高校公式ホームページ</a></p>
+					<p>TEL:045-491-2000</p>
+					<p>FAX:045-491-3190</p>
+					<p>© 2018, Kanagawa Sohgoh High School Web Site Builders all rights reserved.</p>
+				</div>
+            	
+            </div>
+	        <div class="circle"></div>
+			<div class="menu">
+				<ul>
+					<li><a href="../top.html">Top Page</a></li>
+					<li><a href="./access.html">Event</a></li>
+					<li><a href="./group.html">Group</a></li>
+                    <li><a href="./event.html">Access</a></li>
+				</ul>
+			</div>			            
+			<div class="burger">
+				<div class="x"></div>
+				<div class="y"></div>
+                <div class="z"></div>
+			</div>    
+
+		</div>	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+		if( 'ontouchstart' in window ){ var click = 'touchstart'; }
+		else { var click = 'click'; }
+
+
+		$('div.burger').on(click, function(){
+
+				if( !$(this).hasClass('open') ){ openMenu(); } 
+				else { closeMenu(); }
+
+		});
+
+
+		$('div.menu ul li a').on(click, function(e){
+			e.preventDefault();
+			closeMenu();
+		});		
+
+
+		function openMenu(){
+
+			$('div.circle').addClass('expand');
+
+			$('div.burger').addClass('open');	
+			$('div.x, div.y, div.z').addClass('collapse');
+			$('.menu li').addClass('animate');
+
+			setTimeout(function(){ 
+				$('div.y').hide(); 
+				$('div.x').addClass('rotate30'); 
+				$('div.z').addClass('rotate150'); 
+			}, 70);
+			setTimeout(function(){
+				$('div.x').addClass('rotate45'); 
+				$('div.z').addClass('rotate135');  
+			}, 120);
+
+
+
+		}
+
+		function closeMenu(){
+
+			$('div.burger').removeClass('open');	
+			$('div.x').removeClass('rotate45').addClass('rotate30'); 
+			$('div.z').removeClass('rotate135').addClass('rotate150');				
+			$('div.circle').removeClass('expand');
+			$('.menu li').removeClass('animate');
+
+			setTimeout(function(){ 			
+				$('div.x').removeClass('rotate30'); 
+				$('div.z').removeClass('rotate150'); 			
+			}, 50);
+			setTimeout(function(){
+				$('div.y').show(); 
+				$('div.x, div.y, div.z').removeClass('collapse');
+			}, 70);													
+
+		}
+	</script>
+	<!-- end-->
+  </body>
+</html>
